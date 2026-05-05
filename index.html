@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html id="html" class="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="homebody">
+      <header>  
+
+    <nav class="navbar"> 
+        <ul>
+    <li>
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="text">Home</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="acc.html">
+            <i class="fa-solid fa-user"></i>
+            <span class="text">My Account</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="events.html">
+            <i class="fa-solid fa-star"></i>
+            <span class="text">Events & Reviews</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="books.html">
+            <i class="fa-solid fa-book"></i>
+            <span class="text">Books</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="recommendations.html">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <span class="text">Recommendations</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="location.html">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="text">Location & Tickets</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="publishers.html">
+            <i class="fa-solid fa-building"></i>
+            <span class="text">Publishers</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="about.html">
+            <i class="fa-solid fa-circle-info"></i>
+            <span class="text">About & Contact</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#" class="navlogout" onclick="logout()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <!-- <span class="text">Sign Out</span> -->
+        </a>
+    </li>
+</ul>
+    </nav>
+    </header>
+    <button onclick="toggleTheme()" id="themeBtn">
+  <i class="fa-solid fa-moon"></i>
+</button>
+  <div class="sidebar closed" id="sidebar">
+
+        <button class="toggle" onclick="toggleMenu()">☰</button>
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="text">Home</span>
+        </a>
+
+        <a href="acc.html">
+            <i class="fa-solid fa-user"></i>
+            <span class="text">My Account</span>
+        </a>
+
+
+        <a href="events.html">
+            <i class="fa-solid fa-star"></i>
+            <span class="text">Events & Reviews</span>
+        </a>
+
+        <a href="books.html">
+            <i class="fa-solid fa-book"></i>
+            <span class="text">Books</span>
+        </a>
+
+        <a href="recommendations.html">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <span class="text">Recommendations</span>
+        </a>
+
+        <a href="location.html">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="text">Location & Tickets</span>
+        </a>
+
+        <a href="publishers.html">
+            <i class="fa-solid fa-building"></i>
+            <span class="text">Publishers</span>
+        </a>
+
+        <a href="about.html">
+            <i class="fa-solid fa-circle-info"></i>
+            <span class="text">About & Contact</span>
+        </a>
+        <a href="#" class="logout" onclick="logout()">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span class="text">Sign Out</span>
+        </a>
+
+    </div>
+    
+<main class="home">
+
+  <div class="content">
+    <section class="t1">
+      <h1 class="text1">The World of Books..</h1>
+      <br>
+      <h2 class="text2">From timeless classics to modern bestsellers, our collection opens the door to worlds beyond imagination. Discover stories that inspire, educate, and entertain readers of all kinds. Whether you're searching for a beloved novel, a new release, or a hidden gem, you'll find something that speaks to you and keeps you turning pages.</h2>
+    </section>
+    <section class="t2">
+      <h3 class="text3">-Your journey starts here!</h3>
+    </section>
+    <div class="btns">
+    <div class="signin"><button class="btn" onclick="signin()">Sign In</button></div>
+    <div class="up"><button class="btn" onclick="signup()">Sign Up</button></div>
+    </div>
+  </div>
+
+  <section class="fcard">
+    <div class="card">
+      <img src="imgs/blue_books.png" class="book-img" />
+      <p>when in doubt go to library<br>-J.K.Rowling</p>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

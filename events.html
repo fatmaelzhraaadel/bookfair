@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="en">
+  <head class="head-events-reviews">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Book Fair Events & Reviews</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="body-events-reviews">
+    
+      <header>  
+
+    <nav class="navbar"> 
+        <ul>
+    <li>
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="text">Home</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="acc.html">
+            <i class="fa-solid fa-user"></i>
+            <span class="text">My Account</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="events.html">
+            <i class="fa-solid fa-star"></i>
+            <span class="text">Events & Reviews</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="books.html">
+            <i class="fa-solid fa-book"></i>
+            <span class="text">Books</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="recommendations.html">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <span class="text">Recommendations</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="location.html">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="text">Location & Tickets</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="publishers.html">
+            <i class="fa-solid fa-building"></i>
+            <span class="text">Publishers</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="about.html">
+            <i class="fa-solid fa-circle-info"></i>
+            <span class="text">About & Contact</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#" class="navlogout" onclick="logout()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <!-- <span class="text">Sign Out</span> -->
+        </a>
+    </li>
+</ul>
+    </nav>
+
+      <h1 class="logo"><img src="imgs/shelf.png" alt="" width="80" height="80" /> book fair</h1>
+      <hr />
+    </header>
+
+    <div class="sidebar closed" id="sidebar">
+      <button class="toggle" onclick="toggleMenu()">☰</button>
+      <a href="index.html"
+        ><i class="fa-solid fa-house"></i><span class="text">Home</span></a
+      >
+      <a href="acc.html"
+        ><i class="fa-solid fa-user"></i><span class="text">My Account</span></a
+      >
+      <a href="events.html"
+        ><i class="fa-solid fa-star"></i
+        ><span class="text">Events & Reviews</span></a
+      >
+      <a href="books.html"
+        ><i class="fa-solid fa-book"></i><span class="text">Books</span></a
+      >
+      <a href="recommendations.html"
+        ><i class="fa-solid fa-thumbs-up"></i
+        ><span class="text">Recommendations</span></a
+      >
+      <a href="location.html"
+        ><i class="fa-solid fa-location-dot"></i
+        ><span class="text">Location & Tickets</span></a
+      >
+      <a href="publishers.html"
+        ><i class="fa-solid fa-building"></i
+        ><span class="text">Publishers</span></a
+      >
+      <a href="about.html"
+        ><i class="fa-solid fa-circle-info"></i
+        ><span class="text">About & Contact</span></a
+      >
+      <a href="#" class="logout" onclick="logout()"
+        ><i class="fa-solid fa-right-from-bracket"></i
+        ><span class="text">Sign Out</span></a
+      >
+    </div>
+
+    <main class="eventmain">
+      <h2 class="mids"><img src="imgs/halls.png" alt="" width="55" height="50" /> Halls</h2>
+
+      <section id="map-section">
+        <figure>
+          <div style="text-align: center; position: relative">
+            <img
+              src="imgs/halls-map.png"
+              alt="Book Fair Map"
+        
+              width="1000"
+              height="500"
+            />
+           
+          </div>
+        </figure>
+      </section>
+
+      <h2 class="mids">Events</h2>
+
+      <section class="filters">
+        <button onclick="filterHall('all')">All</button>
+        <button onclick="filterHall('hall1')">Hall 1</button>
+        <button onclick="filterHall('hall2')">Hall 2</button>
+        <button onclick="filterHall('hall3')">Hall 3</button>
+        <button onclick="filterHall('hall4')">Hall 4</button>
+        <button onclick="filterHall('hall5')">Hall 5</button>
+        <button onclick="filterHall('hall6')">Hall 6</button>
+      </section>
+
+      <section id="events-details">
+        <hr />
+        <div id="section-hall1" class="hall-content">
+          <div class="hall-title">
+            <h3 class="title-table" id="hall1-table">
+              <img src="imgs/calendar.png" alt="" width="40" height="40" /> Hall 1
+              Events Schedule
+            </h3>
+          </div>
+
+          <table id="hall1" border="1" width="100%" cellpadding="10">
+            <thead>
+              <tr bgcolor="#2c3e50" style="color: white">
+                <th class="table-txt">Period</th>
+                <th class="table-txt">Time Zone</th>
+                <th class="table-txt">Event Name</th>
+                <th class="table-txt">Speaker / Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-txt"  rowspan="2" align="center"><b>Morning Shift</b></td>
+                <td class="table-txt">10:00 AM</td>
+                <td class="table-txt">The Art of the Modern Novel</td>
+                <td class="table-txt">
+                  <i class="fa-solid fa-user"></i>
+                  <a href="profile1.html">Dr. Ahmed Khalid</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-txt">12:00 PM</td>
+                <td class="table-txt">Book Signing "Dreams"</td>
+                <td class="table-txt">
+                  <button type="button" class="btn-reserve">
+                    Reserve a Seat
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-txt" colspan="4" align="center">
+                  <b>☕ Lunch Break (from 2:00 PM to 3:30 PM)</b>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-txt" rowspan="2" align="center"><b>Afternoon Shift</b></td>
+                <td class="table-txt">3:30 PM</td>
+                <td class="table-txt">A seminar on historical literature.</td>
+                <td class="table-txt"><a href="profile2.html">Prof. Ibrahim Saleh</a></td>
+              </tr>
+              <tr>
+                <td class="table-txt">5:00 PM</td>
+                <td class="table-txt">Panel Discussion: Literature & Culture</td>
+                <td class="table-txt">
+                  <button type="button" class="btn-reserve">
+                    Reserve a Seat
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td  class="table-txt" colspan="4" align="left">
+                  <i>* All events may change - Book fair management &copy;</i>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <!-- 1. نفتح الصندوق (البداية) -->
+          <details class="review-details-wrapper">
+            <!-- 2. الـ summary هو الجزء اللي بيفضل ظاهر (الزرار) -->
+            <summary id="reviewSummary" onsubmit="submitReview(event)">
+              <div
+                id="openReviewBtn"
+                class="review-btn"
+                style="display: inline-block"
+              >
+                Add Your Review
+                <img src="imgs/star.png" alt="" width="20px" height="20px" />
+              </div>
+            </summary>
+
+            <!-- 3. الصندوق اللي هيظهر لما نفتح الزرار -->
+            <div class="review-box">
+              <h3 >Share Your Experience</h3>
+              <form id="reviewForm" onsubmit="submitReview(event)">
+                <label for="eventSelect">Select Hall/Event:</label>
+                <select id="eventSelect" required>
+                  <option value="" disabled selected>Choose the hall..</option>
+                  <option value="hall1">
+                    Hall 1 - The Art of the Modern Novel
+                  </option>
+                </select>
+
+                <label for="reviewText">Your Review:</label>
+                <textarea
+                  id="reviewText"
+                  placeholder="Write your thoughts..."
+                  required
+                ></textarea>
+                <!-- الستارز -->
+                <div class="star-rating">
+                  <input
+                    type="radio"
+                    id="star5"
+                    name="rating"
+                    value="5"
+                  /><label for="star5" title="5 stars">★</label>
+
+                  <input
+                    type="radio"
+                    id="star4"
+                    name="rating"
+                    value="4"
+                  /><label for="star4" title="4 stars">★</label>
+                  <input
+                    type="radio"
+                    id="star3"
+                    name="rating"
+                    value="3"
+                  /><label for="star3" title="3 stars">★</label>
+                  <input
+                    type="radio"
+                    id="star2"
+                    name="rating"
+                    value="2"
+                  /><label for="star2" title="2 stars">★</label>
+                  <input
+                    type="radio"
+                    id="star1"
+                    name="rating"
+                    value="1"
+                  /><label for="star1" title="1 star">★</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Now</button>
+              </form>
+            </div>
+
+            <!-- 4. نقفل الصندوق (النهاية) -->
+          </details>
+
+          <div id="hall-summary">
+            <span
+              ><img src="imgs/pngegg.png" alt="" width="20px" height="25px" />
+              <b>Hall 1:</b></span
+            >
+            <span
+              ><img src="imgs/star.png" alt="" width="20px" height="20px" /> Rating:
+              4.5/5</span
+            >
+            <span
+              ><img src="imgs/air.png" alt="" width="20px" height="20px" /> Air
+              Conditioning: Very Cold</span
+            >
+            <span
+              ><img src="imgs/people.png" alt="" width="20px" height="20px" />
+              Crowds: Moderate</span
+            >
+          </div>
+        </div>
+
+        <div id="section-hall2" class="hall-content">
+          <h3 class="title-table" id="hall2-table">
+            <img src="imgs/calendar.png" alt="" width="40" height="40" />Hall 2 Events
+            Schedule
+          </h3>
+          <table id="hall2" border="1" width="100%" cellpadding="10">
+            <thead>
+              <tr bgcolor="#2c3e50" style="color: white">
+                <th class="table-txt">Period</th>
+                <th class="table-txt">Time Zone</th>
+                <th class="table-txt">Event Name</th>
+                <th class="table-txt">Speaker / Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-txt" align="center"><b>Morning Shift</b></td>
+                <td class="table-txt">11:00 AM</td>
+                <td class="table-txt">Seminar on the future of AI.</td>
+                <td class="table-txt">
+                  <button type="button" class="btn-reserve">
+                    Reserve a Seat
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-txt" rowspan="2" align="center"><b>Afternoon Shift</b></td>
+                <td class="table-txt">1:00 PM</td>
+                <td class="table-txt">Latest atomic research.</td>
+                <td class="table-txt">
+                  <button type="button" class="btn-reserve">
+                    Reserve a Seat
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-txt">4:00 PM</td>
+                <td class="table-txt">Graduation Projects Exhibition</td>
+                <td class="table-txt"><i>No reservation needed</i></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td class="table-txt" colspan="4" align="left">
+                  <i>* All events may change - Book fair management &copy;</i>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <!-- 1. نفتح الصندوق (البداية) -->
+          <details class="review-details-wrapper">
+            <!-- 2. الـ summary هو الجزء اللي بيفضل ظاهر (الزرار) -->
+            <summary id="reviewSummary" onsubmit="submitReview(event)">
+              <div
+                id="openReviewBtn"
+                class="review-btn"
+                style="display: inline-block"
+              >
+                Add Your Review
+                <img src="imgs/star.png" alt="" width="20px" height="20px" />
+              </div>
+            </summary>
+
+            <!-- 3. الصندوق اللي هيظهر لما نفتح الزرار -->
+            <div class="review-box">
+              <h3>Share Your Experience</h3>
+              <form id="reviewForm" onsubmit="submitReview(event)">
+                <label for="eventSelect">Select Hall/Event:</label>
+                <select id="eventSelect" required>
+                  <option value="" disabled selected>Choose the hall..</option>
+                  <option value="hall2">Hall 2 - Literature Seminar</option>
+                </select>
+
+                <label for="reviewText">Your Review:</label>
+                <textarea
+                  id="reviewText"
+                  placeholder="Write your thoughts..."
+                  required
+                ></textarea>
+                <!-- الستارز -->
+                <div class="star-rating">
+                  <input
+                    type="radio"
+                    id="star5"
+                    name="rating"
+                    value="5"
+                  /><label for="star5" title="5 stars">★</label>
+
+                  <input
+                    type="radio"
+                    id="star4"
+                    name="rating"
+                    value="4"
+                  /><label for="star4" title="4 stars">★</label>
+                  <input
+                    type="radio"
+                    id="star3"
+                    name="rating"
+                    value="3"
+                  /><label for="star3" title="3 stars">★</label>
+                  <input
+                    type="radio"
+                    id="star2"
+                    name="rating"
+                    value="2"
+                  /><label for="star2" title="2 stars">★</label>
+                  <input
+                    type="radio"
+                    id="star1"
+                    name="rating"
+                    value="1"
+                  /><label for="star1" title="1 star">★</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Now</button>
+              </form>
+            </div>
+
+            <!-- 4. نقفل الصندوق (النهاية) -->
+          </details>
+
+          <div id="hall-summary">
+            <span
+              ><img src="imgs/pngegg.png" alt="" width="20px" height="25px" />
+              <b>Hall 2:</b></span
+            >
+            <span
+              ><img src="imgs/star.png" alt="" width="20px" height="20px" /> Rating:
+              4/5</span
+            >
+            <span
+              ><img src="imgs/air.png" alt="" width="20px" height="20px" /> Air
+              Conditioning: Excellent</span
+            >
+            <span
+              ><img src="imgs/people.png" alt="" width="20px" height="20px" />
+              Crowds: Low</span
+            >
+          </div>
+        </div>
+
+
+        <div id="section-hall3" class="hall-content">
+          <h3 class="title-table" id="hall3-table">
+            <img src="imgs/calendar.png" alt="" width="40" height="40" />Hall 3 Events
+            Schedule
+          </h3>
+          <table id="hall3" border="1" width="100%" cellpadding="10">
+            <tr>
+              <td class="table-txt">The Children's book schedule will be updated soon...</td>
+            </tr>
+          </table>
+
+          <div id="hall-summary">
+            <span
+              ><img src="imgs/pngegg.png" alt="" width="20px" height="25px" />
+              <b>Hall 3:</b></span
+            >
+            <span
+              ><b>Details regarding the hall will be finalized soon.</b></span
+            >
+          </div>
+        </div>
+        <div id="section-hall4" class="hall-content">
+          <h3 class="title-table" id="hall4-table">
+            <img src="imgs/calendar.png" alt="" width="40" height="40" />Hall 4 Events
+            Schedule
+          </h3>
+          <table id="hall4" border="1" width="100%" cellpadding="10">
+            <thead>
+              <tr bgcolor="#2c3e50" style="color: white">
+                <th class="table-txt">Period</th>
+                <th class="table-txt">Time Zone</th>
+                <th class="table-txt">Event Name</th>
+                <th class="table-txt">Speaker / Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-txt" rowspan="2" align="center"><b>Morning Shift</b></td>
+                <td class="table-txt">10:30 AM</td>
+                <td class="table-txt">The Future of Digital Publishing.</td>
+                <td class="table-txt"><b>Global Media Experts</b></td>
+              </tr>
+              <tr>
+                <td class="table-txt">12:30 PM</td>
+                <td class="table-txt">Cross-Cultural Translation Workshop</td>
+                <td class="table-txt"><i>No reservation needed</i></td>
+              </tr>
+              <tr>
+                <td class="table-txt" colspan="4" align="center">
+                  <b>☕ Lunch Break (from 2:30 PM to 3:30 PM)</b>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-txt" rowspan="2" align="center"><b>Afternoon Shift</b></td>
+                <td class="table-txt">3:30 PM</td>
+                <td class="table-txt">International Rights & Licensing.</td>
+                <td class="table-txt">
+                  <button type="button" class="btn-reserve">
+                    Reserve a Seat
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-txt">6:00 PM</td>
+                <td class="table-txt">Meet the Publishers: Networking Session.</td>
+                <td class="table-txt"><i>Open discussion</i></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td  class="table-txt" colspan="4" align="left">
+                  <i>* All events may change - Book fair management &copy;</i>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <!-- 1. نفتح الصندوق (البداية) -->
+          <details class="review-details-wrapper">
+            <!-- 2. الـ summary هو الجزء اللي بيفضل ظاهر (الزرار) -->
+            <summary id="reviewSummary" onsubmit="submitReview(event)">
+              <div
+                id="openReviewBtn"
+                class="review-btn"
+                style="display: inline-block"
+              >
+                Add Your Review
+                <img src="imgs/star.png" alt="" width="20px" height="20px" />
+              </div>
+            </summary>
+
+            <!-- 3. الصندوق اللي هيظهر لما نفتح الزرار -->
+            <div class="review-box">
+              <h3>Share Your Experience</h3>
+              <form id="reviewForm" onsubmit="submitReview(event)">
+                <label for="eventSelect">Select Hall/Event:</label>
+                <select id="eventSelect" required>
+                  <option value="" disabled selected>Choose the hall..</option>
+                  <option value="hall4">
+                    Hall 4 - International Publishing
+                  </option>
+                </select>
+
+                <label for="reviewText">Your Review:</label>
+                <textarea
+                  id="reviewText"
+                  placeholder="Write your thoughts..."
+                  required
+                ></textarea>
+
+                <!-- الستارز -->
+                <div class="star-rating">
+                  <input
+                    type="radio"
+                    id="star5"
+                    name="rating"
+                    value="5"
+                  /><label for="star5" title="5 stars">★</label>
+
+                  <input
+                    type="radio"
+                    id="star4"
+                    name="rating"
+                    value="4"
+                  /><label for="star4" title="4 stars">★</label>
+                  <input
+                    type="radio"
+                    id="star3"
+                    name="rating"
+                    value="3"
+                  /><label for="star3" title="3 stars">★</label>
+                  <input
+                    type="radio"
+                    id="star2"
+                    name="rating"
+                    value="2"
+                  /><label for="star2" title="2 stars">★</label>
+                  <input
+                    type="radio"
+                    id="star1"
+                    name="rating"
+                    value="1"
+                  /><label for="star1" title="1 star">★</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Now</button>
+              </form>
+            </div>
+
+            <!-- 4. نقفل الصندوق (النهاية) -->
+          </details>
+
+          <div id="hall-summary">
+            <span
+              ><img src="imgs/pngegg.png" alt="" width="20px" height="25px" />
+              <b>Hall 4:</b></span
+            >
+            <span
+              ><img src="imgs/star.png" alt="" width="20px" height="20px" /> Rating:
+              3.5/5</span
+            >
+            <span
+              ><img src="imgs/air.png" alt="" width="20px" height="20px" /> Air
+              Conditioning: Very Cold</span
+            >
+            <span
+              ><img src="imgs/people.png" alt="" width="20px" height="20px" />
+              Crowds: High</span
+            >
+          </div>
+        </div>
+
+        <div id="section-hall5" class="hall-content">
+          <h3 class="title-table" id="hall5-table">
+            <img src="imgs/calendar.png" alt="" width="40" height="40" />Hall 5 Events
+            Schedule
+          </h3>
+          <table id="hall5" border="1" width="100%" cellpadding="10">
+            <thead>
+              <tr bgcolor="#2c3e50" style="color: white">
+                <th class="table-txt" >Period</th>
+                <th class="table-txt">Time Zone</th>
+                <th class="table-txt">Event Name</th>
+                <th class="table-txt">Speaker / Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-txt" rowspan="2" align="center"><b>Morning Shift</b></td>
+                <td class="table-txt">10:30 AM</td>
+                <td class="table-txt">Logic and Faith: A Philosophical View.</td>
+                <td class="table-txt"><a href="profile3.html">Dr. Mahmoud El-Feky</a></td>
+              </tr>
+              <tr>
+                <td class="table-txt">12:30 PM</td>
+                <td class="table-txt">Interfaith Dialogue for Peace.</td>
+                <td class="table-txt"><i>Multi-Faith Panel Discussion</i></td>
+              </tr>
+              <tr>
+                <td class="table-txt" colspan="4" align="center">
+                  <b>☕ Lunch Break (from 2:30 PM to 3:30 PM)</b>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-txt" rowspan="2" align="center"><b>Afternoon Shift</b></td>
+                <td class="table-txt">3:30 PM</td>
+                <td class="table-txt">The History of Ancient Philosophy.</td>
+                <td class="table-txt"><i>No reservation needed</i></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td  class="table-txt" colspan="4" align="left">
+                  <i>* All events may change - Book fair management &copy;</i>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <!-- 1. نفتح الصندوق (البداية) -->
+          <details class="review-details-wrapper">
+            <!-- 2. الـ summary هو الجزء اللي بيفضل ظاهر (الزرار) -->
+            <summary id="reviewSummary">
+              <div
+                id="openReviewBtn"
+                class="review-btn"
+                style="display: inline-block"
+              >
+                Add Your Review
+                <img src="imgs/star.png" alt="" width="20px" height="20px" />
+              </div>
+            </summary>
+
+            <!-- 3. الصندوق اللي هيظهر لما نفتح الزرار -->
+            <div class="review-box">
+              <h3>Share Your Experience</h3>
+              <form id="reviewForm" onsubmit="submitReview(event)">
+                <label for="eventSelect">Select Hall/Event:</label>
+                <select id="eventSelect" required>
+                  <option value="" disabled selected>Choose the hall..</option>
+                  <option value="hall5">Hall 5 - Philosophy & History</option>
+                </select>
+
+                <label for="reviewText">Your Review:</label>
+                <textarea
+                  id="reviewText"
+                  placeholder="Write your thoughts..."
+                  required
+                ></textarea>
+
+                <!-- الستارز -->
+                <div class="star-rating">
+                  <input
+                    type="radio"
+                    id="star5"
+                    name="rating"
+                    value="5"
+                  /><label for="star5" title="5 stars">★</label>
+
+                  <input
+                    type="radio"
+                    id="star4"
+                    name="rating"
+                    value="4"
+                  /><label for="star4" title="4 stars">★</label>
+                  <input
+                    type="radio"
+                    id="star3"
+                    name="rating"
+                    value="3"
+                  /><label for="star3" title="3 stars">★</label>
+                  <input
+                    type="radio"
+                    id="star2"
+                    name="rating"
+                    value="2"
+                  /><label for="star2" title="2 stars">★</label>
+                  <input
+                    type="radio"
+                    id="star1"
+                    name="rating"
+                    value="1"
+                  /><label for="star1" title="1 star">★</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Now</button>
+              </form>
+            </div>
+
+            <!-- 4. نقفل الصندوق (النهاية) -->
+          </details>
+
+          <div id="hall-summary">
+            <span
+              ><img src="imgs/pngegg.png" alt="" width="20px" height="25px" />
+              <b>Hall 5:</b></span
+            >
+            <span
+              ><img src="imgs/star.png" alt="" width="20px" height="20px" /> Rating:
+              4.5/5</span
+            >
+            <span
+              ><img src="imgs/air.png" alt="" width="20px" height="20px" /> Air
+              Conditioning: Excellent</span
+            >
+            <span
+              ><img src="imgs/people.png" alt="" width="20px" height="20px" />
+              Crowds: Moderate</span
+            >
+          </div>
+        </div>
+        <div id="section-hall6" class="hall-content">
+          <h3 class="title-table" id="hall6-table">
+            <img src="imgs/calendar.png" alt="" width="40" height="40" />Hall 6 Events
+            Schedule
+          </h3>
+          <table id="hall6" border="1" width="100%" cellpadding="10">
+            <thead>
+              <tr bgcolor="#2c3e50" style="color: white">
+                <th class="table-txt">Period</th>
+                <th class="table-txt">Time Zone</th>
+                <th class="table-txt">Event Name</th>
+                <th class="table-txt">Speaker / Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-txt" rowspan="2" align="center"><b>Morning Shift</b></td>
+                <td class="table-txt">10:00 AM</td>
+                <td class="table-txt">Egyptology: New Discoveries.</td>
+                <td class="table-txt"><a href="profile4.html">Dr. Zahi Hawass</a></td>
+              </tr>
+              <tr>
+                <td class="table-txt">12:30 PM</td>
+                <td class="table-txt">Great Minds in History</td>
+                <td class="table-txt"><b>Historical Research Group</b></td>
+              </tr>
+              <tr>
+                <td class="table-txt" colspan="4" align="center">
+                  <b>☕ Lunch Break (from 2:30 PM to 3:30 PM)</b>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-txt" rowspan="3" align="center"><b>Afternoon Shift</b></td>
+                <td class="table-txt">3:30 PM</td>
+                <td class="table-txt">The Art of Writing Biographies.</td>
+                <td class="table-txt">
+                  <button type="button" class="btn-reserve">
+                    Reserve a Seat
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-txt">6:00 PM</td>
+                <td class="table-txt">Modern History & World Conflicts.</td>
+                <td class="table-txt"><i>Open discussion</i></td>
+              </tr>
+              <tr>
+                <td class="table-txt">8:00 PM</td>
+                <td class="table-txt">Documentary Screening: Ancient Cities</td>
+                <td class="table-txt"><i>Video Presentation & Discussion</i></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td  class="table-txt" colspan="4" align="left">
+                  <i>* All events may change - Book fair management &copy;</i>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <!-- 1. نفتح الصندوق (البداية) -->
+          <details class="review-details-wrapper">
+            <!-- 2. الـ summary هو الجزء اللي بيفضل ظاهر (الزرار) -->
+            <summary id="reviewSummary">
+              <div
+                id="openReviewBtn"
+                class="review-btn"
+                style="display: inline-block"
+              >
+                Add Your Review
+                <img src="imgs/star.png" alt="" width="20px" height="20px" />
+              </div>
+            </summary>
+
+            <!-- 3. الصندوق اللي هيظهر لما نفتح الزرار -->
+            <div class="review-box">
+              <h3>Share Your Experience</h3>
+              <form id="reviewForm" onsubmit="submitReview(event)">
+                <label for="eventSelect">Select Hall/Event:</label>
+                <select id="eventSelect" required>
+                  <option value="" disabled selected>Choose the hall..</option>
+                  <option value="hall6">Hall 6 - Egyptology</option>
+                </select>
+
+                <label for="reviewText">Your Review:</label>
+                <textarea
+                  id="reviewText"
+                  placeholder="Write your thoughts..."
+                  required
+                ></textarea>
+
+                <label for="rating">Your Rating:</label>
+                <div class="star-rating">
+                  <input
+                    type="radio"
+                    id="star5"
+                    name="rating"
+                    value="5"
+                  /><label for="star5" title="5 stars">★</label>
+
+                  <input
+                    type="radio"
+                    id="star4"
+                    name="rating"
+                    value="4"
+                  /><label for="star4" title="4 stars">★</label>
+                  <input
+                    type="radio"
+                    id="star3"
+                    name="rating"
+                    value="3"
+                  /><label for="star3" title="3 stars">★</label>
+                  <input
+                    type="radio"
+                    id="star2"
+                    name="rating"
+                    value="2"
+                  /><label for="star2" title="2 stars">★</label>
+                  <input
+                    type="radio"
+                    id="star1"
+                    name="rating"
+                    value="1"
+                  /><label for="star1" title="1 star">★</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Now</button>
+              </form>
+            </div>
+
+            <!-- 4. نقفل الصندوق (النهاية) -->
+          </details>
+
+          <div id="hall-summary">
+            <span
+              ><img src="imgs/pngegg.png" alt="" width="20px" height="25px" />
+              <b>Hall 6:</b></span
+            >
+            <span
+              ><img src="imgs/star.png" alt="" width="20px" height="20px" /> Rating:
+              3.5/5</span
+            >
+            <span
+              ><img src="imgs/air.png" alt="" width="20px" height="20px" /> Air
+              Conditioning: Very Cold</span
+            >
+            <span
+              ><img src="imgs/people.png" alt="" width="20px" height="20px" />
+              Crowds: High</span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    
+<footer class="foot">
+            <p>Designed by FCAIH students © | All Rights Reserved</p>
+            <p>Book Fair</p>
+</footer>
+    <script src="script.js"></script>
+
+  </body>
+</html>

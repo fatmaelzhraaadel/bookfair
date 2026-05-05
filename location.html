@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Location and tickets for book fair">
+        <link rel="stylesheet" href="style.css">
+        <title>Location & Tickets</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body class="locationbody">     
+        <header>  
+            <nav class="navbar"> 
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="text">Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="acc.html">
+                            <i class="fa-solid fa-user"></i>
+                            <span class="text">My Account</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="events.html">
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text">Events & Reviews</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="books.html">
+                            <i class="fa-solid fa-book"></i>
+                            <span class="text">Books</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="recommendations.html">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span class="text">Recommendations</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="location.html">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span class="text">Location & Tickets</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="publishers.html">
+                            <i class="fa-solid fa-building"></i>
+                            <span class="text">Publishers</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span class="text">About & Contact</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navlogout" onclick="logout()">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <!-- <span class="text">Sign Out</span> -->
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="sidebar closed" id="sidebar">
+            <button class="toggle" onclick="toggleMenu()">☰</button>
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <span class="text">Home</span>
+            </a>
+
+            <a href="acc.html">
+                <i class="fa-solid fa-user"></i>
+                <span class="text">My Account</span>
+            </a>
+
+            <a href="events.html">
+                <i class="fa-solid fa-star"></i>
+                <span class="text">Events & Reviews</span>
+            </a>
+
+            <a href="books.html">
+                <i class="fa-solid fa-book"></i>
+                <span class="text">Books</span>
+            </a>
+
+            <a href="recommendations.html">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <span class="text">Recommendations</span>
+            </a>
+
+            <a href="location.html">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="text">Location & Tickets</span>
+            </a>
+
+            <a href="publishers.html">
+                <i class="fa-solid fa-building"></i>
+                <span class="text">Publishers</span>
+            </a>
+
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i>
+                <span class="text">About & Contact</span>
+            </a>
+                <a href="#" class="logout" onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="text">Sign Out</span>
+            </a>
+        </div>
+        <div class="location">
+
+        <div class="locationtitle">
+            <h2 class="upper"> Book Fair Location &Tickets</h2>
+        </div>
+
+        <div class="container">
+            <h3 class="loc">Location</h3>
+            <h4>select branch</h4>
+            <select  id="branch" onchange="changeMap()">
+                <option value="Cairo">Cairo</option>
+                <option value="Alexandria">Alexandria</option>
+            </select>
+            <iframe id="map" class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.7405573331944!2d31.298176675554878!3d30.07297037490916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fb134624b91%3A0xaf725cf85f5f0fa7!2sCairo%20International%20Fair!5e0!3m2!1sen!2seg!4v1777796367757!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="booking">
+            <h3 class="bookingtitle">Book your tickets</h3>
+            <form id="ticketForm">
+                <label for="user" class="bkinglabel">Username</label>
+                <br>
+                <input class="bkinginput" oninput="checkName()" id="user" type="text" placeholder="Enter your name" required>
+                <p id="usernameMsg"></p>
+                <label for="em" class="bkinglabel" >Email</label>
+                <br>
+                <input class="bkinginput"  oninput="checkEmail()" id="em" type="email" placeholder="Enter your email" required>
+                <br>
+                <p id="emailMsg"></p>
+                <label for="ticktsnum" class="bkinglabel">Number of tickets</label>
+                <br>
+                <input class="bkinginput" id="ticktsnum" type="number" min="1" placeholder="Enter the number of tickets you need"  >
+                
+                <select  id="type" style="height: 42px; margin-top: 20px; border-radius: 7px; background-color: #17243d; color: #585e69; border-style: none;">
+                        <option value="">Select Tickets Type</option>
+                        <option value="100">Normal-100</option>
+                        <option value="200">VIP-200</option>
+                </select>
+                
+                <div class="error" id="typeerror"></div>
+                <h4>Total Price: <span id="total">0</span>EGP</h4>
+                    
+               
+                <button class="submitbooking" type="submit" style="height: 42px;  border-radius: 30px; background-color: #17243d;   color:#a1b3c9; ">Book Now</button>
+                <button class="resetbooking" type="reset" style="height: 42px; border-radius: 30px; background-color: #17243d;   color:#a1b3c9; ">Reset</button>
+                
+                <div class="success" id="successMsg"></div>
+            </form>
+        </div>
+    </div>
+
+<footer class="foot">
+            <p>Designed by FCAIH students © | All Rights Reserved</p>
+            <p>Book Fair</p>
+</footer>
+
+    <script src="script.js"></script>
+    </body>
+</html>

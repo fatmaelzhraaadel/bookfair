@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>contact us</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+</head>
+<body class="contactbody">
+   <header>  
+
+            <nav class="navbar"> 
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="text">Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="acc.html">
+                            <i class="fa-solid fa-user"></i>
+                            <span class="text">My Account</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="events.html">
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text">Events & Reviews</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="books.html">
+                            <i class="fa-solid fa-book"></i>
+                            <span class="text">Books</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="recommendations.html">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span class="text">Recommendations</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="location.html">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span class="text">Location & Tickets</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="publishers.html">
+                            <i class="fa-solid fa-building"></i>
+                            <span class="text">Publishers</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span class="text">About & Contact</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navlogout" onclick="logout()">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <!-- <span class="text">Sign Out</span> -->
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+  <div class="sidebar closed" id="sidebar">
+
+    <button class="toggle" onclick="toggleMenu()">☰</button>
+
+    <a href="index.html">
+      <i class="fa-solid fa-house"></i>
+      <span class="text">Home</span>
+    </a>
+
+    <a href="acc.html">
+      <i class="fa-solid fa-user"></i>
+      <span class="text">My Account</span>
+    </a>
+
+    <a href="events.html">
+      <i class="fa-solid fa-star"></i>
+      <span class="text">Events & Reviews</span>
+    </a>
+
+    <a href="books.html">
+      <i class="fa-solid fa-book"></i>
+      <span class="text">Books</span>
+    </a>
+
+    <a href="recommendations.html">
+      <i class="fa-solid fa-thumbs-up"></i>
+      <span class="text">Recommendations</span>
+    </a>
+
+    <a href="location.html">
+      <i class="fa-solid fa-location-dot"></i>
+      <span class="text">Location & Tickets</span>
+    </a>
+
+    <a href="publishers.html">
+      <i class="fa-solid fa-building"></i>
+      <span class="text">Publishers</span>
+    </a>
+
+    <a href="/contact.html">
+      <i class="fa-solid fa-circle-info"></i>
+      <span class="text">About & Contact</span>
+    </a>
+
+    <a href="#" class="logout" onclick="logout()">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <span class="text">Sign Out</span>
+    </a>
+
+  </div>
+  
+
+  <div>
+    <h1 class="head">Book Fair</h1>
+  </div>
+
+  
+
+  <p class="reach">
+   Please share your contact details below, and a member of our team will be in touch shortly
+  </p>
+
+  <form class="contact">
+    <div class="input">
+      <label class="contactlabel">Please Enter Your Name:</label>
+      <input class="coninput" type="text" required placeholder="Your Name">
+
+      <label class="contactlabel">Please Enter Your Phone Number:</label>
+      <input class="coninput" type="number" required placeholder="EX: 0123456789"/>
+
+      <label class="contactlabel">Please Enter Your Email:</label>
+      <input class="coninput"  type="email" required placeholder="kareem@gmail.com"/>
+
+      <label class="contactlabel">Notes:</label>
+      <textarea class="notes" placeholder="Write your notes here..."></textarea>
+
+      <input  type="submit" class="submit" value="Submit"/>
+    </div>
+  </form>
+
+  
+
+<div class="cardscontact">
+  <a class="cardcontact" href="mailto:fairs@gebo.gov.eg">
+    <i class="fa-solid fa-envelope"></i>
+    <span>Email</span>
+    <span>fairs@gebo.gov.eg</span>
+  </a>
+  <a class="cardcontact" href="https://maps.app.goo.gl/tjATXjh7rzW6AH5P8" target="_blank">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Location</span>
+    <span>Cairo, Egypt</span>
+  </a>
+  <a class="cardcontact" href="https://wa.me/201017137733" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>WhatsApp</span>
+    <span>+20 101 713 7733</span>
+  </a>
+  <a class="cardcontact" href="https://www.facebook.com/share/1BU67YX2qF/" target="_blank">
+    <i class="fa-brands fa-facebook"></i>
+    <span>Facebook</span>
+    <span>Book Fair</span>
+  </a>
+</div>
+
+<footer class="foot">
+            <p>Designed by FCAIH students © | All Rights Reserved</p>
+            <p>Book Fair</p>
+</footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

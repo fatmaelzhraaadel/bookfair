@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html id="html" class="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>  
+
+    <nav class="navbar"> 
+        <ul>
+    <li>
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="text">Home</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="acc.html">
+            <i class="fa-solid fa-user"></i>
+            <span class="text">My Account</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="events.html">
+            <i class="fa-solid fa-star"></i>
+            <span class="text">Events & Reviews</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="books.html">
+            <i class="fa-solid fa-book"></i>
+            <span class="text">Books</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="recommendations.html">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <span class="text">Recommendations</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="location.html">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="text">Location & Tickets</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="publishers.html">
+            <i class="fa-solid fa-building"></i>
+            <span class="text">Publishers</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="about.html">
+            <i class="fa-solid fa-circle-info"></i>
+            <span class="text">About & Contact</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#" class="navlogout" onclick="logout()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <!-- <span class="text">Sign Out</span> -->
+        </a>
+    </li>
+</ul>
+    </nav>
+    </header>
+ 
+<body class="accbody">
+    <div class="sidebar closed" id="sidebar">
+
+        <button class="toggle" onclick="toggleMenu()">☰</button>
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="text">Home</span>
+        </a>
+
+        <a href="acc.html">
+            <i class="fa-solid fa-user"></i>
+            <span class="text">My Account</span>
+        </a>
+
+
+        <a href="events.html">
+            <i class="fa-solid fa-star"></i>
+            <span class="text">Events & Reviews</span>
+        </a>
+
+        <a href="books.html">
+            <i class="fa-solid fa-book"></i>
+            <span class="text">Books</span>
+        </a>
+
+        <a href="recommendations.html">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <span class="text">Recommendations</span>
+        </a>
+
+        <a href="location.html">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="text">Location & Tickets</span>
+        </a>
+
+        <a href="publishers.html">
+            <i class="fa-solid fa-building"></i>
+            <span class="text">Publishers</span>
+        </a>
+
+        <a href="about.html">
+            <i class="fa-solid fa-circle-info"></i>
+            <span class="text">About & Contact</span>
+        </a>
+        <a href="#" class="logout" onclick="logout()">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span class="text">Sign Out</span>
+        </a>
+
+    </div>
+    <main class="acc" >   
+        <div class="accCard">
+            <div class="accpic">
+                <img class="pic" src="/imgs/profile.jpeg" alt="profile">
+            </div>
+            <div class="accinfo">
+                <p id="accName"    class="info" ></p>
+                <p id="accEmail"   class="info" ></p>
+             </div>   
+        </div> 
+
+        <div class="library-section">
+
+            <h2 class="libtext">My Library</h2>
+
+            <div class="library-box">
+                <p class="empty">Your library is empty! <br> Start adding your favorite books!</p>
+                <div class="library" id="library"></div>
+            </div>
+
+        </div>
+    </main>
+
+
+<footer class="foot">
+            <p>Designed by FCAIH students © | All Rights Reserved</p>
+            <p>Book Fair</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

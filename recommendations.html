@@ -1,0 +1,269 @@
+<!DOCTYPE html >
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap">
+
+    <style>
+    body {
+    font-family: "DM Serif Display", serif;
+    }
+    </style>
+
+</head>
+
+<body class="recbody" >
+    
+      <header>  
+
+    <nav class="navbar"> 
+        <ul>
+    <li>
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="text">Home</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="acc.html">
+            <i class="fa-solid fa-user"></i>
+            <span class="text">My Account</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="events.html">
+            <i class="fa-solid fa-star"></i>
+            <span class="text">Events & Reviews</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="books.html">
+            <i class="fa-solid fa-book"></i>
+            <span class="text">Books</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="recommendations.html">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <span class="text">Recommendations</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="location.html">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="text">Location & Tickets</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="publishers.html">
+            <i class="fa-solid fa-building"></i>
+            <span class="text">Publishers</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="about.html">
+            <i class="fa-solid fa-circle-info"></i>
+            <span class="text">About & Contact</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#" class="navlogout" onclick="logout()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <!-- <span class="text">Sign Out</span> -->
+        </a>
+    </li>
+</ul>
+    </nav>
+    </header>
+    
+    <div class="sidebar closed" id="sidebar">
+
+        <button class="toggle" onclick="toggleMenu()">☰</button>
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="text">Home</span>
+        </a>
+
+        <a href="acc.html">
+            <i class="fa-solid fa-user"></i>
+            <span class="text">My Account</span>
+        </a>
+
+
+        <a href="events.html">
+            <i class="fa-solid fa-star"></i>
+            <span class="text">Events & Reviews</span>
+        </a>
+
+        <a href="books.html">
+            <i class="fa-solid fa-book"></i>
+            <span class="text">Books</span>
+        </a>
+
+        <a href="recommendations.html">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <span class="text">Recommendations</span>
+        </a>
+
+        <a href="location.html">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="text">Location & Tickets</span>
+        </a>
+
+        <a href="publishers.html">
+            <i class="fa-solid fa-building"></i>
+            <span class="text">Publishers</span>
+        </a>
+
+        <a href="about.html">
+            <i class="fa-solid fa-circle-info"></i>
+            <span class="text">About & Contact</span>
+        </a>
+    
+    </div>
+
+<style>
+       .add {
+    font-size: 18px;
+    white-space: nowrap;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* makes text pop */
+}
+</style>
+
+
+<div class="parent"> 
+
+<div class="categorie"><h1>Best-sellers</h1></div>
+<div  class="book-container">
+<div class="book">
+    <img src="imgs/The Alchemist.jpg" class="imges">
+    <h2>The Alchemist</h2> 
+    <p>Paulo Coelho</p>
+    <button class="addlibtn" onclick="addToLibrary('The Alchemist','Paulo Coelho','imgs/The Alchemist.jpg')"style="font-size: 19px;" >
+        <span style="font-size:xxx-large;">+</span><br><span class ="add">Add To Library</span> </button>
+</div>
+
+
+<div class="book">
+    <img src="imgs/to kill a mockingbird.jpg" class="imges">
+    <h2>To Kill a Mockingbird</h2>
+    <p>Harper Lee</p>
+    <button class="addlibtn" onclick="addToLibrary('To Kill a Mockingbird','Harper Lee','imgs/to kill a mockingbird.jpg')" style="font-size: 19px;" >
+        <span style="font-size:xxx-large;">+</span><br><span class ="add">Add To Library</span></button>
+</div>
+
+
+<div class="book">
+    <img src="imgs/1984g.jpg" class="imges">
+    <h2>1984</h2> 
+    <p>George Orwel </p>
+    <button class="addlibtn" onclick="addToLibrary('1984','George Orwel ','imgs/1984g.jpg')" style="font-size: 19px;" >
+        <span style="font-size:xxx-large;">+</span> <br><span class ="add">Add To Library</span></button>
+</div>
+
+
+<div class="book">
+    <img src="imgs/The Metamorphosis.jpg" class="imges">
+    <h2>The Metamorphosis</h2>
+    <p>The Metamorphosis</p>
+    <button class="addlibtn" onclick="addToLibrary('The Metamorphosis','The Metamorphosis','imgs/The Alchemist.jpg')" style="font-size: 19px;" >
+        <span style="font-size:xxx-large;">+</span><br><span class ="add">Add To Library</span></button>
+</div>
+</div>
+<div class="categorie"><h1>New-Realeases</h1></div>
+<div class="book-container">
+<div class="book">
+    <img src="imgs/Kafka on the Shore.jpg" class="imges">
+    <h2>Kafka On The Shore</h2>
+    <p>Haruki Murakami</p>
+    <button class="addlibtn" onclick="addToLibrary('Kafka On The Shore','Haruki Murakami','imgs/Kafka on the Shore.jpg')" style="font-size: 19px;" >
+        <span style="font-size:xxx-large;">+</span><br><span class ="add">Add To Library</span></button>
+</div>
+
+
+<div class="book">
+    <img src="imgs/The Castle.jpg "class="imges">
+    <h2>The Castle</h2>
+    <p>Kafka</p>
+    <button class="addlibtn" onclick="addToLibrary('The Castle','Kafka','imgs/The Castle.jpg ')"style="font-size: 19px;" >
+        <span style="font-size:xxx-large;">+</span> <br><span class ="add">Add To Library</span></button>
+</div>
+
+
+<div class="book">
+    <img src="imgs/Jane Austen.jpg" class="imges">
+    <h2>Sense And Sensibility</h2>
+    <p>Jane Austen</p>
+    <button class="addlibtn" onclick="addToLibrary('Sense And Sensibility','Jane Austen','imgs/Jane Austen.jpg')" style="font-size: 19px;" >
+        <span style="font-size:xxx-large;">+</span> <br><span class ="add">Add To Library</span></button>
+
+</div>
+
+<div class="book">
+    <img src="imgs/Atomic Habits.jpg" class="imges">
+    <h2>Atomic Habits</h2>
+    <p>James Clear</p>
+    <button class="addlibtn" onclick="addToLibrary('Atomic Habits','James Clear','imgs/Atomic Habits.jpg')" style="font-size: 19px;" >
+        <span style="font-size:xxx-large;">+</span><br><span class ="add">Add To Library</span></button>
+</div>
+</div>
+<div class="categorie"><h1>Recommendations</h1></div>
+<div class="book-container">
+<div class="book">
+    <img src="imgs/Pride and Prejudice.jpg" class="imges">
+    <h2>Pride And Prejudice</h2>
+    <p>Jane Austen</p>
+    <button class="addlibtn" onclick="addToLibrary('Pride And Prejudice','Jane Austen','imgs/Pride and Prejudice.jpg')" style="font-size: 19px;" >
+        <span style="font-size:xxx-large;">+</span><br><span class ="add">Add To Library</span></button>
+</div>
+
+
+<div class="book">
+    <img src="imgs/The Bell Jar by Sylvia Plath.jpg" class="imges">
+    <h2>The Bell Jar</h2>
+    <p>Sylvia Plath</p>
+    <button class="addlibtn" onclick="addToLibrary('The Bell Jar ','Sylvia Plath','imgs/The Bell Jar by Sylvia Plath.jpg')" style="font-size: 19px;" >
+        <span style="font-size:xxx-large;">+</span><br><span class ="add">Add To Library</span></button>
+</div>
+
+
+<div class="book">
+    <img src="imgs/A Man Called Ove.jpg" class="imges">
+    <h2>A Man Called Ove</h2>
+    <p>Fredrick Backman</p>
+    <button class="addlibtn" onclick="addToLibrary('A Man Called Ove','Fredrick Backman','imgs/A Man Called Ove.jpg')" style="font-size: 19px;" >
+        <span style="font-size:xxx-large;">+</span> <br><span class ="add">Add To Library</span></button>
+</div>
+
+<div class="book">
+    <img src="imgs/Before the coffee gets cold.jpg" class="imges">
+    <h2>Before the coffee gets cold</h2>
+    <p>Toshikazu Kawaguchi</p>
+    <button class="addlibtn" onclick="addToLibrary('Before the coffee gets cold','Toshikazu Kawaguchi','imgs/Before the coffee gets cold.jpg')" style="font-size: 19px;" >
+        <span style="font-size:xxx-large;">+</span><br><span class ="add">Add To Library</span></button>
+</div>
+</div>
+</div>
+
+
+<footer class="foot">
+            <p>Designed by FCAIH students © | All Rights Reserved</p>
+            <p>Book Fair</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="back">
+  <div class="sign"> 
+        <h5 style="font-style: italic;" >Welcome!</h5>
+        <form class="signform"   id="signform">
+        
+            <label for="user">Username</label>
+            <br>
+            <input oninput="checkName()" id="user" type="text" placeholder="Enter your name" required>
+            
+            <p id="usernameMsg"></p>
+            
+            <label for="pass">Password</label>
+            <br>
+            <input  oninput="checkPass()" id="pass" type="password" placeholder="Enter a strong password" required>
+            <p id="passMsg"></p>
+            
+            <label for="em">Email</label>
+            <br>
+            <input oninput="checkEmail()" id="em" type="email" placeholder="Enter your email" required>
+        
+            <p id="emailMsg"></p>
+            
+            <label for="phone">Phone Number</label>
+            <br>
+            <input oninput="checkPhone()" id="phone" type="tel" placeholder="Enter valid number" required>
+            <p id="phoneMsg"></p>
+            <br>
+            <button class="signsub" type="submit">Create</button>
+        </form>
+        
+    </div>  
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

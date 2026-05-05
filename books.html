@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html id="html" class="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bookBody">
+    
+      <header>  
+
+    <nav class="navbar"> 
+        <ul>
+    <li>
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="text">Home</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="acc.html">
+            <i class="fa-solid fa-user"></i>
+            <span class="text">My Account</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="events.html">
+            <i class="fa-solid fa-star"></i>
+            <span class="text">Events & Reviews</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="books.html">
+            <i class="fa-solid fa-book"></i>
+            <span class="text">Books</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="recommendations.html">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <span class="text">Recommendations</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="location.html">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="text">Location & Tickets</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="publishers.html">
+            <i class="fa-solid fa-building"></i>
+            <span class="text">Publishers</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="about.html">
+            <i class="fa-solid fa-circle-info"></i>
+            <span class="text">About & Contact</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#" class="navlogout" onclick="logout()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <!-- <span class="text">Sign Out</span> -->
+        </a>
+    </li>
+</ul>
+    </nav>
+    </header>
+<!-- SIDEBAR -->
+<div class="sidebar closed" id="sidebar">
+
+        <button class="toggle" onclick="toggleMenu()">☰</button>
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="text">Home</span>
+        </a>
+
+        <a href="acc.html">
+            <i class="fa-solid fa-user"></i>
+            <span class="text">My Account</span>
+        </a>
+
+        <a href="events.html">
+            <i class="fa-solid fa-star"></i>
+            <span class="text">Events & Reviews</span>
+        </a>
+
+        <a href="books.html">
+            <i class="fa-solid fa-book"></i>
+            <span class="text">Books</span>
+        </a>
+
+        <a href="recommendations.html">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <span class="text">Recommendations</span>
+        </a>
+
+        <a href="location.html">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="text">Location & Tickets</span>
+        </a>
+
+        <a href="publishers.html">
+            <i class="fa-solid fa-building"></i>
+            <span class="text">Publishers</span>
+        </a>
+
+        <a href="about.html">
+            <i class="fa-solid fa-circle-info"></i>
+            <span class="text">About & Contact</span>
+        </a>
+        
+        <a href="#" class="logout" onclick="logout()">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span class="text">Sign Out</span>
+        </a>
+
+    </div>
+
+
+<!-- MAIN -->
+<div class="bookMain">
+
+
+<header>
+  <h1 class="booktitle">Books</h1>
+</header>
+
+
+<input  type="search" id="search" placeholder="Search Categories...">
+<p id="noResults" style="display:none; text-align:center; margin-top:20px;">
+  No results found ...!
+</p>
+
+
+  <h2 class="category" >History</h2>
+  <div class="books">
+   
+
+    <div class="book-card">
+       <div class="overlay">
+    <span class="plus">+</span>
+    <p>Add to Library</p>
+  </div>
+      <img src="/imgs/14 Books About Lesser-Known Women's History.jpeg">
+      <h3 class="title">When Women Ruled The World</h3>
+      <p class="author">Kara Cooney </p>
+    </div>
+
+     <!-- Book 2 -->
+    <div class="book-card">
+        <div class="overlay" >
+            <span class="plus">+</span>
+            <p>Add to Library</p>
+        </div>
+        <img src="imgs/The Egyptian Book of the Dead_ The Complete Papyrus of Ani.jpg">
+        <h3 class="title">The Egyptian Book of the Dead</h3>
+        <p class="author">E.A. Wallis Budge</p>
+    </div>
+
+    <!-- Book 3 -->
+    <div class="book-card">
+        <div class="overlay" >
+            <span class="plus">+</span>
+            <p>Add to Library</p>
+        </div>
+        <img src="imgs/Athens_ City of Wisdom.jpg">
+        <h3 class="title">Athens: City of Wisdom</h3>
+        <p class="author">Bruce Clark</p>
+    </div>
+
+    <!-- Book 4 -->
+    <div class="book-card">
+        <div class="overlay" >
+            <span class="plus">+</span>
+            <p>Add to Library</p>
+        </div>
+        <img src="imgs/Philosophy in the Age of the Pyramids.jpg">
+        <h3 class="title">Philosophy in the Age of the Pyramids</h3>
+        <p class="author">Moustafa Gadalla</p>
+      </div>
+   
+  </div>
+
+
+
+
+  <h2 class="category">Psychology</h2>
+  <div class="books">
+    <div class="book-card">
+       <div class="overlay">
+    <span class="plus">+</span>
+    <p>Add to Library</p>
+  </div>
+      <img src="imgs/Book Review_ The Red Book by Carl Jung (1).jpeg">
+      <h3 class="title"> The Red Book </h3>
+      <p class="author">Carl Jung</p>
+    </div>
+
+    <div class="book-card">
+       <div class="overlay">
+    <span class="plus">+</span>
+    <p>Add to Library</p>
+  </div>
+      <img src="imgs/The Metamorphosis by Franz Kafka ; Classic Literature, Book Classics, Short Classics, Franz Kafka.jpeg">
+      <h3 class="title">The Metamorphosis</h3>
+      <p class="author">Franz Kafka</p>
+    </div>
+
+    <div class="book-card">
+       <div class="overlay">
+    <span class="plus">+</span>
+    <p>Add to Library</p>
+  </div>
+      <img src="imgs/Inside The Criminal Mind_ Revised And Updated Edition (0804139903).jpeg">
+      <h3 class="title">Inside The Criminal Mind</h3>
+      <p class="author">Stanton E. Samenow</p>
+    </div>
+
+    <div class="book-card">
+       <div class="overlay">
+    <span class="plus">+</span>
+    <p>Add to Library</p>
+  </div>
+      <img src="imgs/Mirror Neurons and the Pitfalls of Brain Research.jpeg">
+      <h3 class="title">The Mythe OF Mirror Neurons</h3>
+      <p class="author">Gregory Hickok</p>
+    </div>
+  </div>
+
+
+
+
+   <h2 class="category">Academic Books</h2>
+  <div class="books">
+    <div class="book-card">
+       <div class="overlay">
+    <span class="plus">+</span>
+    <p>Add to Library</p>
+  </div>
+      <img src="imgs/a human algorithm.jpeg">
+      <h3 class="title">A Human Algorithm</h3>
+      <p class="author">Flynn Coleman</p>
+    </div>
+
+    <div class="book-card">
+       <div class="overlay">
+    <span class="plus">+</span>
+    <p>Add to Library</p>
+  </div>
+      <img src="imgs/The best science books of 2013 _ New Scientist.jpeg">
+      <h3 class="title">The Anatomy Of Violence</h3>
+      <p class="author">Adrian Raine</p>
+    </div>
+
+    <div class="book-card">
+       <div class="overlay">
+    <span class="plus">+</span>
+    <p>Add to Library</p>
+  </div>
+      <img src="imgs/Believing Is Seeing_ A Physicist Explains How Science Shattered His Atheism and Revealed the Necessity of Faith.jpeg">
+      <h3 class="title">Believing Is Seeing</h3>
+      <p class="author">Michael Guillen</p>
+    </div>
+
+    <div class="book-card">
+       <div class="overlay">
+    <span class="plus">+</span>
+    <p>Add to Library</p>
+  </div>
+      <img src="imgs/The Knowledge Machine_ How an Unreasonable Idea Created Modern Science.jpeg">
+      <h3 class="title">The Knowledge Machine_</h3>
+      <p class="author">Michael Strevens</p>
+    </div>
+  </div>
+  <!-- ممكن تحطهم في ديف احسن -->
+   <div class="books">
+   <div class="book-card">
+        <div class="overlay" >
+            <span class="plus">+</span>
+            <p>Add to Library</p>
+        </div>
+        <img src="imgs/Learning PHP, MySQL & JavaScript 5e.jpg">
+        <h3 class="title">Learning PHP, MySQL & JavaScript</h3>
+        <p class="author">Robin Nixon</p>
+    </div>
+
+    <!-- Book 2 -->
+    <div class="book-card">
+        <div class="overlay" >
+            <span class="plus">+</span>
+            <p>Add to Library</p>
+        </div>
+        <img src="imgs/Calculus_ Stewart, James_ .jpg">
+        <h3 class="title">Calculus</h3>
+        <p class="author">James Stewart</p>
+    </div>
+
+    <!-- Book 3 -->
+    <div class="book-card">
+        <div class="overlay" >
+            <span class="plus">+</span>
+            <p>Add to Library</p>
+        </div>
+        <img src="imgs/Campbell Biology.jpg">
+        <h3 class="title">Campbell Biology</h3>
+        <p class="author">Lisa Urry</p>
+    </div>
+
+    <!-- Book 4 -->
+    <div class="book-card">
+        <div class="overlay" >
+            <span class="plus">+</span>
+            <p>Add to Library</p>
+        </div>
+        <img src="imgs/Integral Equations.jpg">
+        <h3 class="title">Integral Equations</h3>
+        <p class="author">L.G. Chambers</p>
+    </div>
+</div>
+
+   <h2 class="category">Novels</h2>
+  <div class="books">
+    <div class="book-card">
+       <div class="overlay">
+    <span class="plus">+</span>
+    <p>Add to Library</p>
+  </div>
+      <img src="imgs/the song of achillies.jpeg">
+      <h3 class="title">Songs Of Achilles</h3>
+      <p class="author">Madelinw Miller</p>
+    </div>
+
+    <div class="book-card">
+       <div class="overlay">
+    <span class="plus">+</span>
+    <p>Add to Library</p>
+  </div>
+      <img src="imgs/The Deadly Sisterhood_ A Story of Women, Power, and Intrigue in the Italian Renaissance, 1427-1527.jpeg">
+      <h3 class="title">The Deadly Sisterhood</h3>
+      <p class="author">Leonie Frieda</p>
+    </div>
+
+    <div class="book-card">
+       <div class="overlay">
+    <span class="plus">+</span>
+    <p>Add to Library</p>
+  </div>
+      <img src="imgs/One of my all time favorites! Love this story_.jpeg">
+      <h3 class="title">Little Women</h3>
+      <p class="author">Louisa M.Alcott</p>
+    </div>
+
+    <div class="book-card">
+       <div class="overlay">
+    <span class="plus">+</span>
+    <p>Add to Library</p>
+  </div>
+      <img src="imgs/If You Love Colleen Hoover's _Verity,_ You'll Love These Women-Centered Thrillers.jpeg">
+      <h3 class="title">Gone Girl</h3>
+      <p class="author">Gillian Flynn</p>
+    </div>
+  </div>
+   <!-- ممكن تحطهم في ديف احسن -->
+  <div class="books">
+    <!-- Book 1 -->
+    <div class="book-card">
+        <div class="overlay" >
+            <span class="plus">+</span>
+            <p>Add to Library</p>
+        </div>
+        <!-- Note: Ensure your Rilke image is named letters.jpg in your folder -->
+        <img src="imgs/Letters .jpg">
+        <h3 class="title">Letters to a Young Poet</h3>
+        <p class="author">Rainer Maria Rilke</p>
+    </div>
+
+
+
+
+    <!-- Book 2 -->
+    <div class="book-card">
+        <div class="overlay" >
+            <span class="plus">+</span>
+            <p>Add to Library</p>
+        </div>
+        <!-- Exact filename from your screenshot: The Brothers karamazov.jpg -->
+        <img src="imgs/the brothers karamazov.jpeg">
+        <h3 class="title">The Brothers Karamazov</h3>
+        <p class="author">Fyodor Dostoevsky</p>
+    </div>
+
+    <!-- Book 3 -->
+    <div class="book-card">
+        <div class="overlay" >
+            <span class="plus">+</span>
+            <p>Add to Library</p>
+        </div>
+        <!-- Exact filename from your screenshot: jane eyre.jpg -->
+        <img src="imgs/jane eyre.jpg">
+        <h3 class="title">Jane Eyre</h3>
+        <p class="author">Charlotte Brontë</p>
+    </div>
+
+    <!-- Book 4 -->
+    <div class="book-card">
+        <div class="overlay" >
+            <span class="plus">+</span>
+            <p>Add to Library</p>
+        </div>
+        <img src="imgs/crime and punishment.jpg">
+        <h3 class="title">Crime and Punishment</h3>
+        <p class="author">Fyodor Dostoevsky</p>
+    </div>
+</div>
+
+
+
+<!-- فريده -->
+ 
+
+
+
+
+
+ <h2 class="category">Language & Linguistics</h2>
+
+<div class="books">
+    <!-- Book 1 -->
+    <div class="book-card">
+        <div class="overlay" >
+            <span class="plus">+</span>
+            <p>Add to Library</p>
+        </div>
+        <img src="imgs/Greek Grammar [Revised Edition].jpg">
+        <h3 class="title">Greek Grammar</h3>
+        <p class="author">Herbert Weir Smyth</p>
+    </div>
+
+    <!-- Book 2 -->
+    <div class="book-card">
+        <div class="overlay" >
+            <span class="plus">+</span>
+            <p>Add to Library</p>
+        </div>
+        <!-- Note the double space and trailing underscore in your filename -->
+        <img src="imgs/Random House Japanese-English English-Japanese Dictionary  Seigo Nakao_ .jpg">
+        <h3 class="title">Japanese-English Dictionary</h3>
+        <p class="author">Seigo Nakao</p>
+    </div>
+
+    <!-- Book 3 -->
+    <div class="book-card">
+        <div class="overlay" >
+            <span class="plus">+</span>
+            <p>Add to Library</p>
+        </div>
+        <!-- Note the space before .jpg in your screenshot -->
+        <img src="imgs/English Grammar In Use Book With Answers .jpg">
+        <h3 class="title">English Grammar In Use</h3>
+        <p class="author">Raymond Murphy</p>
+    </div>
+
+    <!-- Book 4 -->
+    <div class="book-card">
+        <div class="overlay" >
+            <span class="plus">+</span>
+            <p>Add to Library</p>
+        </div>
+        <img src="imgs/The Language Instinct - Wikipedia.jpeg">
+        <h3 class="title">The Language Instinct</h3>
+        <p class="author">Steven Pinker</p>
+    </div>
+</div>
+
+</div>
+
+
+
+<footer class="foot">
+            <p>Designed by FCAIH students © | All Rights Reserved</p>
+            <p>Book Fair</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
